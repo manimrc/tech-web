@@ -13,15 +13,12 @@ function ArticlePage() {
   };
 
   return (
-    <div className="article-page">
-      <button className="close-button" onClick={() => navigate(-1)}>
-        &times;
-      </button>
+    <div className="article-page app-container">
+      <button className="close-button" onClick={() => navigate(-1)}>Close</button>
       <h3>{article.title}</h3>
       <p>{article.content}</p>
     </div>
   );
-  
 }
 
 export default ArticlePage;

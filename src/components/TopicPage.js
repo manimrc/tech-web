@@ -9,17 +9,23 @@ function TopicPage() {
   const navigate = useNavigate();
   const techTopics = topicData[technology]?.topics || {};
 
-   return (
-    <div className="grid-container">
-      {Object.keys(topicData[technology].topics).map((subtopic) => (
-        <div className="card" key={subtopic} onClick={() => navigate(`/topics/${technology}/${subtopic}`)}>
-          <h4>{topicData[technology].topics[subtopic].title}</h4>
-          <p>{topicData[technology].topics[subtopic].content.slice(0, 100)}...</p>
-        </div>
-      ))}
+  return (
+    <div className="topic-page app-container">
+      <h2>{topicData[technology]?.name}</h2>
+      <button className="close-button" onClick={() => navigate(-1)}>Close</button>
+      <div className="card-grid">
+        {Object.keys(techTopics).map((topic, index) => (
+          <div
+            key={topic}
+            className="card"
+            onClick={() => navigate(`/topic/${technology}/${topic}`)}
+          >
+            <h4>{techTopics[topic].title}</h4>
+          </div>
+        ))}
+      </div>
     </div>
   );
-  
 }
 
 export default TopicPage;

@@ -1,65 +1,68 @@
-/* Global pastel color palette */
-:root {
-  --background-color: #f7f5f2;
-  --card-bg-color: #ffffff;
-  --card-border-color: #dadce0;
-  --accent-color: #7e5bef;
-  --text-color: #333;
-  --close-btn-color: #ff6f61;
+/* App.css */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  background-color: var(--background-color);
-  font-family: Arial, sans-serif;
-  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  background-color: #f7f7ff;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-/* Grid layout for homepage and topic pages */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
+.app-container {
+  max-width: 1200px;
   padding: 20px;
 }
 
-/* Card styling */
+/* Card Styling */
 .card {
-  background-color: var(--card-bg-color);
-  border: 1px solid var(--card-border-color);
-  border-radius: 8px;
-  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
+  padding: 20px;
+  margin: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Close button for article pages */
 .close-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background-color: var(--close-btn-color);
-  color: white;
+  background-color: transparent;
+  color: #333;
+  font-size: 18px;
   border: none;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
   cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 }
 
-.close-button:hover {
-  background-color: #ff4c4c;
+.article-page,
+.topic-page,
+.home-page {
+  padding: 20px;
 }
 
-/* Article page styling */
-.article-page {
-  padding: 40px;
-  max-width: 800px;
-  margin: auto;
-  background-color: var(--card-bg-color);
-  border-radius: 8px;
-  line-height: 1.6;
+/* Pastel Colors for Buttons and Cards */
+.card-terraform {
+  background-color: #f4e2d8;
 }
+.card-azure {
+  background-color: #d1eaf2;
+}
+.card-docker {
+  background-color: #e7daf6;
+}
+/* Add more color schemes as needed */
