@@ -65,4 +65,7 @@ body {
 .card-docker {
   background-color: #e7daf6;
 }
+.card-kubernetes {
+  background-color: #d1eaf2;
+}
 /* Add more color schemes as needed */

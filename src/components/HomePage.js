@@ -9,7 +9,7 @@ function HomePage() {
 
   return (
     <div className="home-page app-container">
-      <h1>Technology Topics</h1>
+      <h1>Please Wait Loading...</h1>
       <div className="card-grid">
         {Object.keys(topicData).map((tech, index) => (
           <div
