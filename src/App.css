@@ -1,38 +1,65 @@
-.App {
-  text-align: center;
+/* Global pastel color palette */
+:root {
+  --background-color: #f7f5f2;
+  --card-bg-color: #ffffff;
+  --card-border-color: #dadce0;
+  --accent-color: #7e5bef;
+  --text-color: #333;
+  --close-btn-color: #ff6f61;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  background-color: var(--background-color);
+  font-family: Arial, sans-serif;
+  color: var(--text-color);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Grid layout for homepage and topic pages */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 16px;
+  padding: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Card styling */
+.card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Close button for article pages */
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--close-btn-color);
   color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.close-button:hover {
+  background-color: #ff4c4c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Article page styling */
+.article-page {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  background-color: var(--card-bg-color);
+  border-radius: 8px;
+  line-height: 1.6;
 }
