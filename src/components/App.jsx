@@ -1,14 +1,14 @@
 // src/components/App.js
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// src/components/App.js
+import ReactGA from 'react-ga4';
 import HomePage from './HomePage';
 import TopicPage from './TopicPage';
 import ArticlePage from './ArticlePage';
 import '../App.css';
 
-
-
 function App() {
+  ReactGA.initialize("G-6PSML37BDX"); // Replace with your Measurement ID
+
   return (
     <Router>
       <Routes>
