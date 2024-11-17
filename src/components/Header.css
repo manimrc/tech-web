@@ -1,0 +1,80 @@
+/* Header.css */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f0f4f8; /* Adjust color */
+  padding: 0.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header .header-left .home-button {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1rem;
+}
+
+.header .header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.social-icon {
+  color: #333;
+  font-size: 1.5rem;
+  transition: color 0.2s ease;
+}
+
+.social-icon:hover {
+  color: #808080; /* Hover color */
+}
+
+.subscribe-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.subscribe-button:hover {
+  background-color: #808080;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .header .header-right {
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .social-icon {
+    font-size: 1.2rem;
+  }
+
+  .subscribe-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}

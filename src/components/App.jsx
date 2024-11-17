@@ -4,6 +4,7 @@ import ReactGA from 'react-ga4';
 import HomePage from './HomePage';
 import TopicPage from './TopicPage';
 import ArticlePage from './ArticlePage';
+import Header from './Header'; // Import the Header component
 import '../App.css';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <Router>
+      <Header /> {/* Add Header component here */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/topic/:technology" element={<TopicPage />} />
