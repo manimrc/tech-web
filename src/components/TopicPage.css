@@ -1,18 +1,25 @@
 /* TopicPage.css */
 
+/* Container Styling */
 .topic-page-container {
   padding: 100px 20px 20px; /* Account for the header */
+  width: 100%; /* Ensure the container spans the full width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Grid Layout for Topic Cards */
 .topic-page-container .card-grid {
-  display: grid;
+  display: grid; /* Use grid for proper alignment */
   grid-template-columns: repeat(
-    auto-fit,
-    minmax(150px, 1fr)
-  ); /* Responsive grid */
-  gap: 1rem;
-  width: 100%;
+    auto-fill,
+    minmax(140px, 1fr)
+  ); /* Dynamic multi-column layout */
+  gap: 1rem; /* Adds spacing between cards */
+  width: 100%; /* Make grid span the full width */
+  max-width: 1200px; /* Optional: Limit width for aesthetics */
+  justify-content: center; /* Center align the grid */
 }
 
 /* Card Styling */
@@ -20,7 +27,7 @@
   position: relative;
   background-size: cover;
   background-position: center;
-  height: 150px; /* Square height */
+  height: 140px; /* Slightly larger cards */
   border-radius: 8px;
   cursor: pointer;
   overflow: hidden;
@@ -55,14 +62,59 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* Responsive for small screens */
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  /* Tablets and small screens */
+  .topic-page-container .card-grid {
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(150px, 1fr)
+    ); /* Adjust grid layout for smaller screens */
+  }
+
   .topic-page-container .card {
-    height: 120px; /* Adjust height for smaller screens */
+    height: 180px; /* Adjust card height for tablets */
   }
 
   .topic-page-container .card-overlay {
-    font-size: 0.9rem;
+    font-size: 0.95rem; /* Slightly smaller text */
+    padding: 0.8rem; /* Adjust padding */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Medium to Small Mobile Screens */
+  .topic-page-container .card-grid {
+    grid-template-columns: 1fr; /* Stack cards in a single column */
+    gap: 0.5rem; /* Reduce gap */
+  }
+
+  .topic-page-container .card {
+    height: 150px; /* Smaller cards for smaller screens */
+    width: 150px;
+  }
+
+  .topic-page-container .card-overlay {
+    font-size: 0.9rem; /* Adjust font size for readability */
+    padding: 0.5rem; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Very Small Mobile Screens */
+  .topic-page-container .card {
+    height: 130px; /* Even smaller cards */
+    width: 130px;
+  }
+
+  .topic-page-container .card-overlay {
+    font-size: 0.85rem; /* Even smaller font */
+    padding: 0.4rem; /* Tighter padding */
+  }
+
+  /* Ensure the header spacing looks good */
+  .topic-page-container {
+    padding: 80px 10px 20px; /* Adjust the padding for the smaller screen */
   }
 }
 
@@ -92,6 +144,16 @@
 }
 
 /* Responsive Adjustments for Close Button */
+@media (max-width: 1024px) {
+  .close-button {
+    top: 15px; /* Adjust for tablets */
+    right: 15px;
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+}
+
 @media (max-width: 768px) {
   .close-button {
     top: 10px; /* Adjust for smaller screens */
@@ -99,5 +161,16 @@
     width: 35px;
     height: 35px;
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Very Small Mobile Screens */
+  .close-button {
+    top: 5px; /* Slightly smaller top position */
+    right: 5px;
+    width: 30px; /* Smaller button size */
+    height: 30px;
+    font-size: 1rem; /* Adjust font size */
   }
 }

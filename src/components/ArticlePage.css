@@ -3,6 +3,7 @@
   padding: 100px 20px 20px;
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .article-content {
@@ -34,18 +35,42 @@
 
 /* Close Button Styling */
 .close-button {
-  background-color: #6c63ff;
+  margin: 50px;
+  background-color: #808080;
   color: white;
   border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 1rem;
-  position: relative;
+  position: absolute;
   top: 20px;
   right: 20px;
+  transition: all 0.3s ease;
 }
 
 .close-button:hover {
-  background-color: #4b4fc0;
+  background-color: rgb(159, 154, 154);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  /* Smaller close button */
+  .close-button {
+    font-size: 0.9rem; /* Slightly smaller text */
+    padding: 0.4rem 0.8rem; /* Adjust padding */
+    top: 15px; /* Adjust top margin */
+    right: 15px; /* Adjust right margin */
+    margin: 70px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller close button for mobile devices */
+  .close-button {
+    font-size: 0.8rem; /* Even smaller text */
+    padding: 0.3rem 0.6rem; /* Even smaller padding */
+    top: 10px; /* Adjust top margin */
+    right: 10px; /* Adjust right margin */
+  }
 }
